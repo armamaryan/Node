@@ -1,21 +1,21 @@
-<h2 class="page-header"><%= book.title %></h2>
+<h2 id="book-title" class="page-header"><%= book.title %></h2>
 <div class="book-details">
     <div>
-        <img class="book-cover" src="<%= book.coverImagePath %>">
+        <img id="book-cover-image" class="book-cover" src="<%= book.coverImagePath %>">
         <div class="book-details-btn-grid">
-            <a class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
+            <a id="book-details-edit-button" class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
             <%- include('../partials/deleteForm', { url: `/books/${book.id}` }) %> 
-            <a class="btn btn-primary book-details-author-button" href="/authors/<%= book.author.id %>">View Author</a>
+            <a id="book-details-view-author-button" class="btn btn-primary book-details-author-button" href="/authors/<%= book.author.id %>">View Author</a>
         </div>
     </div>
     <div class="book-details-grid">
-        <div class="book-details-label">Author:</div>
-        <div><%= book.author.name %></div>
-        <div class="book-details-label">Publish Date:</div>
-        <div><%= book.publishDate.toDateString() %></div>
-        <div class="book-details-label">Page Count:</div>
-        <div><%= book.pageCount %></div>
-        <div class="book-details-label">Description:</div>
-        <div><%= book.description %></div>
+        <div id="book-details-author-label" class="book-details-label">Author:</div>
+        <div id="book-details-author-name"><%= book.author.name %></div>
+        <div id="book-details-publish-date-label" class="book-details-label">Publish Date:</div>
+        <div id="book-details-publish-date"><%= book.publishDate.toDateString() %></div>
+        <div id="book-details-page-count-label" class="book-details-label">Page Count:</div>
+        <div id="book-details-page-count"><%= book.pageCount %></div>
+        <div id="book-details-page-description-label" class="book-details-label">Description:</div>
+        <div id="book-details-page-description"><%= book.description %></div>
     </div>
 </div>
