@@ -17,23 +17,12 @@
     </div>
 </div>
 
- <div class="form-row">
+<div class="form-row">
     <div class="form-item">
-      <label id="publish-date-field-label">Publish Date</label>
-      <input id="publish-date-field" type="date" name="publishDate" 
-             value="<%= book.publishDate == null ? '' : book.publishDate.toISOString().split('T')[0] %>">
-    </div>
-
-  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  
-  <script>
-    $(function() {
-      $("#publish-date-field").datepicker();
-    });
-  </script>
+    <label id="publish-date-field-label">Publish Date</label>
+    <input id="publish-date-field" type="date" name="publishDate"
+                value="<%= book.publishDate == null ? '' : book.publishDate.toISOString().split('T')[0] %>"> 
+</div>
 
  <div class="form-item">
     <label id="page-count-field-label">Page Count</label>
